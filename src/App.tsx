@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './styles.css';
+import {Todo} from './model';
+import InputField from './components/inputField/InputField';
+import TodosList from './components/list/TodosList';
 
 const App: React.FC = () =>  {
+  const [query, setQuery] = useState<string>('');
+  const [todos, setTodos] = useState<Todo[]>([]);
+
+
+  const handleAdd = (e:React.FormEvent) => {
+    e.preventDefault();
+    if(query){
+      setTodos([...todos,{
+        id: Math.floor(Math.random()*100000),
+        todo: query,
+        isDone: false,
+      }]);
+      setQuery('');
+    }
+  }
+
   return (
     <div className='app'>
-      <h1 className='header'>hello world</h1>
-      <div>hello world</div>
+      <h1 className='heading'>tasks manager</h1>
+      <InputField query={query} setQuery={setQuery} handleSubmit={handleAdd}/>
+      <TodosList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }

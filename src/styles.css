@@ -2,14 +2,18 @@
     width:100vw;
     height:100vh;
     display:flex;
-    justify-content:center;
+    align-items:center;
     flex-direction:column;
     background:#2f74c0;
     font-family: 'Neucha', cursive;
-};
-
-.header {
-    text-align:Center;
-    text-transform: uppercase;
 }
+
+.heading {
+    text-align:center;
+    text-transform: uppercase;
+    color:#ffffff;
+    padding:1rem 0;
+}
+
+
 

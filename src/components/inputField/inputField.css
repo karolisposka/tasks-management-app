@@ -1,0 +1,20 @@
+.input {
+    padding:0.25rem 0.5rem;
+    background:#ffffff;
+    border-radius:10rem;
+}
+
+.input_box {
+    outline:none;
+    border:none;
+    margin:0rem 1rem;
+}
+
+.input_button {
+    background: none;
+    padding:0.5rem;
+    border-radius:50%;
+    color:#ffffff;
+    background:#2f74c0;
+    box-shadow: 0 0 10px #000000;
+}
