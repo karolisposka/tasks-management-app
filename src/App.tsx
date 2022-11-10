@@ -1,11 +1,11 @@
 import React from 'react';
+import './styles.css';
 
-
-
-function App() {
+const App: React.FC = () =>  {
   return (
-    <div>
-      hello world
+    <div className='app'>
+      <h1 className='header'>hello world</h1>
+      <div>hello world</div>
     </div>
   );
 }
