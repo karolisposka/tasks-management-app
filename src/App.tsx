@@ -7,6 +7,7 @@ import TodosList from './components/list/TodosList';
 const App: React.FC = () =>  {
   const [query, setQuery] = useState<string>('');
   const [todos, setTodos] = useState<Todo[]>([]);
+  const [completed, setCompleted] = useState<Todo[]>([]);  
 
 
   const handleAdd = (e:React.FormEvent) => {
@@ -25,7 +26,7 @@ const App: React.FC = () =>  {
     <div className='app'>
       <h1 className='heading'>tasks manager</h1>
       <InputField query={query} setQuery={setQuery} handleSubmit={handleAdd}/>
-      <TodosList todos={todos} setTodos={setTodos}/>
+        <TodosList todos={todos} completed={completed} setCompleted={setCompleted} setTodos={setTodos}/>
     </div>
   );
 }
